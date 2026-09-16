@@ -1,4 +1,3 @@
-# PAASWORD-strength
 # Password Strength Checker
 
 ## Project Description
@@ -82,4 +81,191 @@ The user enters a password:
 password = input("Enter your password: ")
 ```
 
-### 3. Check Password L
+### 3. Check Password Length
+
+The program checks whether the password contains at least 8 characters.
+
+```python
+if len(password) >= 8:
+```
+
+If the condition is satisfied, the score increases by 1.
+
+### 4. Check Uppercase Letter
+
+The program searches for letters from A-Z.
+
+```python
+re.search(r"[A-Z]", password)
+```
+
+### 5. Check Lowercase Letter
+
+The program searches for letters from a-z.
+
+```python
+re.search(r"[a-z]", password)
+```
+
+### 6. Check Number
+
+The program searches for a number from 0-9.
+
+```python
+re.search(r"[0-9]", password)
+```
+
+### 7. Check Special Character
+
+The program checks for a character that is not a letter or number.
+
+```python
+re.search(r"[^A-Za-z0-9]", password)
+```
+
+Examples include:
+
+```text
+! @ # $ % &
+```
+
+### 8. Check Common Passwords
+
+The program contains a small list of common passwords:
+
+```python
+["password", "12345678", "qwerty", "password123", "admin"]
+```
+
+If the entered password matches one of these, the program displays:
+
+```text
+Strength: Very Weak
+Suggestion: Avoid common passwords.
+```
+
+### 9. Display Suggestions
+
+If any requirement is missing, the program displays suggestions to improve the password.
+
+For example:
+
+```text
+Suggestions to improve your password:
+- Add at least one uppercase letter (A-Z).
+- Add at least one special character (!, @, #, $, etc.).
+```
+
+## Example Output
+
+### Strong Password
+
+```text
+===== PASSWORD STRENGTH CHECKER =====
+Enter your password: Hello123!
+
+Password Strength: Very Strong
+
+Your password meets all basic strength checks!
+```
+
+### Weak Password
+
+```text
+===== PASSWORD STRENGTH CHECKER =====
+Enter your password: hello
+
+Password Strength: Weak
+
+Suggestions to improve your password:
+- Use at least 8 characters.
+- Add at least one uppercase letter (A-Z).
+- Add at least one number (0-9).
+- Add at least one special character (!, @, #, $, etc.).
+```
+
+### Common Password
+
+```text
+===== PASSWORD STRENGTH CHECKER =====
+Enter your password: password
+
+Strength: Very Weak
+Suggestion: Avoid common passwords.
+```
+
+## How to Run the Project
+
+### Step 1: Install Python
+
+Make sure Python is installed on your computer.
+
+### Step 2: Save the Program
+
+Save the code as:
+
+```text
+password_checker.py
+```
+
+### Step 3: Open Terminal
+
+Go to the folder where the Python file is saved.
+
+### Step 4: Run the Program
+
+```bash
+python password_checker.py
+```
+
+### Step 5: Enter Your Password
+
+The program will check the password and display its strength and suggestions.
+
+## Concepts Used
+
+This project demonstrates the following Python concepts:
+
+* Variables
+* User input
+* If-else conditions
+* Lists
+* For loops
+* Regular expressions
+* String methods
+* Score-based decision making
+
+## Learning Outcomes
+
+After completing this project, you can understand:
+
+* How to take user input in Python.
+* How to use conditional statements.
+* How to work with lists.
+* How to use regular expressions.
+* How password requirements can be checked programmatically.
+* How to provide suggestions based on conditions.
+* Basic concepts of password security.
+
+## Security Note
+
+This project is intended for educational purposes. It performs basic password-strength checks and should not be considered a complete password-security system.
+
+Do not enter real passwords into programs or repositories that are not designed to securely handle sensitive information.
+
+## Future Improvements
+
+The project can be improved by adding:
+
+* A larger common-password database.
+* A password generator.
+* More detailed password analysis.
+* Detection of repeated characters or simple patterns.
+* A graphical user interface (GUI).
+* Better protection for password input.
+
+## Author
+
+Sneha Kumari
+
+
