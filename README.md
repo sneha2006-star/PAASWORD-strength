@@ -196,29 +196,17 @@ Suggestion: Avoid common passwords.
 
 ## How to Run the Project
 
-### Step 1: Install Python
-
-Make sure Python is installed on your computer.
-
-### Step 2: Save the Program
-
-Save the code as:
-
-```text
-password_checker.py
-```
-
-### Step 3: Open Terminal
+### Step 1: Open Terminal
 
 Go to the folder where the Python file is saved.
 
-### Step 4: Run the Program
+### Step 2: Run the Program
 
 ```bash
 python password_checker.py
 ```
 
-### Step 5: Enter Your Password
+### Step 3: Enter Your Password
 
 The program will check the password and display its strength and suggestions.
 
